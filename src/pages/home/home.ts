@@ -11,15 +11,20 @@ export class HomePage {
   username = '';
   email = '';
   constructor(private nav: NavController, private auth: AuthServiceProvider) {
-	  console.log("merda, merda");
+	  
     let info = this.auth.getUserInfo();
     this.username = info['name'];
     this.email = info['email'];
   }
  
-  public logout() {
+ /* public logout() {
     this.auth.logout().subscribe(succ => {
       this.nav.setRoot('LoginPage')
     });
   }
+  */
+  public goRoute() {
+      this.nav.setRoot('RoutePage')
+  }
+  
 }

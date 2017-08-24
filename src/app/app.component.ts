@@ -3,8 +3,10 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { RoutePage } from '../pages/route/route';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +27,8 @@ export class MyApp {
     });
 	
 	this.pages = [
-      { title: 'Home', component: HomePage },
+      { title: 'Rota', component: RoutePage },
+      { title: 'Informações', component: HomePage },
       { title: 'Logout', component: LoginPage }
     ]; 
   }
